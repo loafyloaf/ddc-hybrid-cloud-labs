@@ -42,6 +42,16 @@
     * [Part 1](microservices/part1.md)
     * [Part 2](microservices/part2.md)
 
+### Microservice Workshop (OSS)
+
+* [Lecture](some-section/README.md)
+    * [Introduction](microservices/introduction.md)
+    * [Prerequisites](microservices/prerequisites.md)
+* [Lab](microservices/lab3/README.md)
+    * [Database setup](operators/lab2/README.md)
+    * [Part 1](microservices/part1.md)
+    * [Part 2](microservices/part2.md)
+
 ### Serverless Workshop
 
 * [Introduction](some-section/README.md)
