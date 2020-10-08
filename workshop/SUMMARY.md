@@ -48,9 +48,9 @@
     * [Introduction](microservices/introduction.md)
     * [Prerequisites](microservices/prerequisites.md)
 * [Lab](microservices/lab3/README.md)
-    * [Database setup](operators/lab2/README.md)
-    * [Part 1](microservices/part1.md)
-    * [Part 2](microservices/part2.md)
+    * [Database setup](oss/pg_full.md)
+    * [Part 1](oss/part1.md)
+    * [Part 2](oss/part2.md)
 
 ### Serverless Workshop
 
