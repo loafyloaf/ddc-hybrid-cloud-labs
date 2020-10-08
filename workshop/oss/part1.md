@@ -1,16 +1,10 @@
 # Part 1
 
-1. [Quickly install previous workshops](#1-quickly-install-previous-workshops)
-1. [Build Java microservices](#2-build-java-microservices)
+## 1. Quickly install dependencies
 
-## 1. Quickly install previous workshops
-
-*This step lets you quickly install the components that was deployed in Identity Management workshop and Operator workshop*
-
-Clone the repo **example-bank**
+*This step lets you quickly install App Id*
 
 ```text
-$ git clone https://github.com/IBM/example-bank
 $ cd example-bank/scripts
 ```
 
@@ -47,24 +41,6 @@ Log in with the OpenShift cluster provided for you using the OpenShift console. 
 
 ![OpenShift Console](../.gitbook/generic/image%20%283%29.png)
 
-Create a project called example-bank
-
-```text
-$ oc new-project example-bank
-```
-
-Deploy a Postgres instance in your OpenShift cluster
-
-```text
-$ ./deploy-db.sh
-
-clusterserviceversion.operators.coreos.com/postgresql-operator.v0.1.1 created
-subscription.operators.coreos.com/postgresql-operator-dev4devs-com created
-operatorgroup.operators.coreos.com/example-bank-rgc7j unchanged
-deployment.apps/postgresql-operator created
-database.postgresql.dev4devs.com/creditdb created
-```
-
 Create secrets using the script below. This creates the necessary secrets in your OpenShift cluster
 
 ```text
@@ -81,17 +57,7 @@ $ oc apply -f deployment.yaml
 
 ## 2. Build Java microservices
 
-Build the microservices - user, transaction, and erasure microservices. You'll also build an image that would load the proper schema in the database.
-
-First, you can build the schema and database model loader.
-
-```
-## make sure your are in the root directory of the example-bank repo
-$ export DOCKER_HUB_USER=your-dockerhub-username
-$ docker build -t $DOCKER_HUB_USER/lab-data:1.0 data_model
-```
-
-Then, build the transaction and user microservices
+Build the microservices - user, transaction, and erasure microservices.
 
 ```
 $ cd bank-app-backend
@@ -113,7 +79,6 @@ You can now push the container images you built
 
 ```
 $ docker login
-$ docker push $DOCKER_HUB_USER/lab-data:1.0
 $ docker push $DOCKER_HUB_USER/lab-transaction:1.0
 $ docker push $DOCKER_HUB_USER/lab-user:1.0
 $ docker push $DOCKER_HUB_USER/lab-erasure:1.0
