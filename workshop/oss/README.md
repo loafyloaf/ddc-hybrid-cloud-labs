@@ -10,7 +10,7 @@ This series has an additional presentation.
 
 |  |
 | :--- |
-| [Database setup] | (pg_full.md) |
+| [Database setup](pg_full.md) |
 | [Part 1](part1.md) |
 | [Part 2](part2.md) |
 
