@@ -46,7 +46,7 @@
 
 * [Lecture](some-section/README.md)
     * [Introduction](microservices/introduction.md)
-    * [Prerequisites](microservices/prerequisites.md)
+    * [Prerequisites](oss/prerequisites.md)
 * [Lab](microservices/lab3/README.md)
     * [Database setup](oss/pg_full.md)
     * [Part 1](oss/part1.md)
